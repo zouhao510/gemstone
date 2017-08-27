@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.zouhao</groupId>
+  <artifactId>gemstone</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>gemstone</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+  </dependencies>
+  <modules>
+    <module>gemstone-registercenter</module>
+    <module>gemstone-service-api</module>
+    <module>genstone-common-utils</module>
+    <module>gemstone-paycenter</module>
+    <module>gemstone-ordercenter</module>
+    <module>gemstone-shopcenter</module>
+    <module>gemstone-userservice</module>
+    <module>gemstone-usercenter</module>
+    <module>gemstone-common-utils</module>
+  </modules>
+</project>
