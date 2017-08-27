@@ -1,0 +1,25 @@
+##############架构说明##########
+gemstone(宝石)：
+
+该框架采用spring cloud , spring mvc , mybatis , redis 实现的微服务框架，各个服务独立部署，各自数据独立管理。
+
+
+gemstone-registercenter:微服务注册中心；
+
+gemstone-service-api:所有微服务接口层；
+
+gemstone-usercenter:用户中心微服务；
+
+gemstone-paycenter:支付中心微服务；
+
+gemstone-ordercenter:订单中心微服务；
+
+gemstone-shopcenter:商品中心微服务；
+
+gemstone-common-util:通过工具类三方包（common-collections）；
+
+##########架构设计图#####################
+详见soaframe.png
+
+
+
