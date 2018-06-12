@@ -1,10 +1,10 @@
-package org.gemstone.registercenter;
+package org.gemstone.paycenter;
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class PayCenterStarter 
 {
     public static void main( String[] args )
     {

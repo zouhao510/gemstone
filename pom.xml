@@ -9,10 +9,35 @@
 
   <name>gemstone</name>
   <url>http://maven.apache.org</url>
+  
+  	<parent>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-parent</artifactId>
+	    <version>1.5.4.RELEASE</version>
+	</parent>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <junit.version>4.12</junit.version>
   </properties>
+  
+  <dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Dalston.SR1</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+		      <groupId>junit</groupId>
+		      <artifactId>junit</artifactId>
+		      <version>4.12</version>
+		      <scope>test</scope>
+		    </dependency>
+		</dependencies>
+	</dependencyManagement>
 
   <dependencies>
   </dependencies>

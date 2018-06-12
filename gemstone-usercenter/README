@@ -1,0 +1,11 @@
+1.springcloud 服务客服端，采用feign实现声明式服务。
+Feign同时支持客户端负载均衡通过Ribbon实现。
+Feign同时支持服务保护与容错通过Hystrix实现。
+
+Feign声明式服务使用步骤：
+
+a.开启Feign声明式服务：@EnableFeignClients
+b.定义RPC服务接口，接口绑定服务名（@FeignClient("SCLOUD-SERVICE-PROVIDER")创建Feign客户端时，同时创建一个同名的Ribbon客户端），
+  方法绑定具体rpc的rest接口（@RequestMapping("/test/hello") ）。
+c.注入定义rpc接口，实现rpc服务调用。
+
