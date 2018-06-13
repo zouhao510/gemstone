@@ -1,6 +1,9 @@
 package org.gemstone.shopcenter.controller;
 
-import org.apache.log4j.Logger;
+import com.netflix.hystrix.Hystrix;
+import org.gemstone.shopcenter.service.HystrixService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,19 +15,22 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/consume")
 public class ConsumerController {
 
-    private final Logger log = Logger.getLogger(ConsumerController.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(ConsumerController.class);
 
     @Autowired
     RestTemplate restTemplate;
 
+    @Autowired
+    private HystrixService hystrixService;
+
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String helloConsumer() {
 
-        // 通过服务名组成的url从服务注册中心获取服务
-        ResponseEntity<String> response = restTemplate.getForEntity("http://SCLOUD-SERVICE-PROVIDER/test/hello",
-                String.class);
-        log.info("Get rpc request response : " + response.getBody());
-        return response.getBody();
+        String result =  hystrixService.orderSayHello();
+
+        LOGGER.info("execute rpc invoke orderSayHello get result :{}",result);
+
+        return result;
     }
 
 }

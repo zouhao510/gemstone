@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author: zouhao 2017年8月13日 下午9:27:35
  */
 // 指定服务名（不区分大小写）绑定服务,并提供服务降级回调实现
-@FeignClient(name = "SCLOUD-SERVICE-PROVIDER", fallback = HelloServiceFallBack.class)
+@FeignClient(name = "GEMSTONE-ORDERCENTER", fallback = HelloServiceFallBack.class)
 // @FeignClient(name = "SCLOUD-SERVICE-PROVIDER", value = DisableHystrixConfiguration.class) //针对该服务名关闭Hystrix服务保护和熔断功能
 
 public interface HelloService {

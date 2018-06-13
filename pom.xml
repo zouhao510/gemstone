@@ -80,11 +80,9 @@
   <modules>
     <module>gemstone-registercenter</module>
     <module>gemstone-service-api</module>
-    <module>genstone-common-utils</module>
     <module>gemstone-paycenter</module>
     <module>gemstone-ordercenter</module>
     <module>gemstone-shopcenter</module>
-    <module>gemstone-userservice</module>
     <module>gemstone-usercenter</module>
     <module>gemstone-common-utils</module>
   </modules>
